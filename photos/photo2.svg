@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1f2" />
+      <stop offset="50%" stop-color="#fdf4ff" />
+      <stop offset="100%" stop-color="#fed7aa" />
+    </linearGradient>
+    <filter id="softGlow2">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="700" fill="url(#bg2)" rx="24"/>
+
+  <!-- Botanical Pastel Foliage -->
+  <g opacity="0.35">
+    <path d="M 60,650 Q 80,480 180,440" stroke="#10b981" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="140" cy="480" rx="26" ry="12" fill="#34d399" transform="rotate(-30 140 480)"/>
+    <ellipse cx="100" cy="540" rx="30" ry="14" fill="#6ee7b7" transform="rotate(25 100 540)"/>
+    <path d="M 540,650 Q 510,470 420,430" stroke="#10b981" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="460" cy="470" rx="26" ry="12" fill="#34d399" transform="rotate(30 460 470)"/>
+    <ellipse cx="500" cy="540" rx="30" ry="14" fill="#6ee7b7" transform="rotate(-25 500 540)"/>
+  </g>
+
+  <!-- Big Pastel Sun Flower -->
+  <g transform="translate(300, 360)">
+    <!-- Petals -->
+    <g fill="#fde047" opacity="0.9">
+      <circle cx="0" cy="-90" r="28" />
+      <circle cx="64" cy="-64" r="28" />
+      <circle cx="90" cy="0" r="28" />
+      <circle cx="64" cy="64" r="28" />
+      <circle cx="0" cy="90" r="28" />
+      <circle cx="-64" cy="64" r="28" />
+      <circle cx="-90" cy="0" r="28" />
+      <circle cx="-64" cy="-64" r="28" />
+    </g>
+    <!-- Flower Center -->
+    <circle cx="0" cy="0" r="70" fill="#f59e0b" stroke="#d97706" stroke-width="4"/>
+    <!-- Cute flower face -->
+    <circle cx="-25" cy="-10" r="8" fill="#78350f"/>
+    <circle cx="25" cy="-10" r="8" fill="#78350f"/>
+    <path d="M -18,15 Q 0,35 18,15" fill="none" stroke="#78350f" stroke-width="5" stroke-linecap="round"/>
+    <!-- Blush cheeks -->
+    <ellipse cx="-40" cy="10" rx="14" ry="8" fill="#f43f5e" opacity="0.4"/>
+    <ellipse cx="40" cy="10" rx="14" ry="8" fill="#f43f5e" opacity="0.4"/>
+  </g>
+
+  <!-- Cute Bee Character Hovering -->
+  <g transform="translate(390, 190)">
+    <!-- Dotted Flight Trail -->
+    <path d="M -220,120 Q -100,-40 -10,30" fill="none" stroke="#f59e0b" stroke-width="4" stroke-dasharray="8,8"/>
+
+    <!-- Bee Wings -->
+    <ellipse cx="-20" cy="-45" rx="32" ry="20" fill="#e0f2fe" opacity="0.85" stroke="#bae6fd" stroke-width="3" transform="rotate(-30 -20 -45)"/>
+    <ellipse cx="20" cy="-45" rx="32" ry="20" fill="#e0f2fe" opacity="0.85" stroke="#bae6fd" stroke-width="3" transform="rotate(30 20 -45)"/>
+
+    <!-- Bee Body -->
+    <ellipse cx="0" cy="0" rx="60" ry="46" fill="#fbbf24" stroke="#d97706" stroke-width="4"/>
+    
+    <!-- Stripes -->
+    <path d="M -20,-43 Q -20,0 -20,43" stroke="#1f2937" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M 12,-44 Q 12,0 12,44" stroke="#1f2937" stroke-width="12" fill="none" stroke-linecap="round"/>
+
+    <!-- Antennae -->
+    <path d="M 35,-35 Q 55,-70 70,-60" fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="70" cy="-60" r="5" fill="#f43f5e"/>
+    <path d="M 20,-40 Q 35,-80 50,-75" fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="50" cy="-75" r="5" fill="#f43f5e"/>
+
+    <!-- Cute Eyes & Smile -->
+    <ellipse cx="42" cy="-6" rx="6" ry="8" fill="#1f2937"/>
+    <circle cx="44" cy="-9" r="2.5" fill="#ffffff"/>
+    <path d="M 40,10 Q 48,18 52,10" fill="none" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="38" cy="8" rx="8" ry="5" fill="#f43f5e" opacity="0.5"/>
+
+    <!-- Little Stinger (cute) -->
+    <polygon points="-60,-4 -75,0 -60,4" fill="#1f2937"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g fill="#f59e0b">
+    <circle cx="140" cy="180" r="5" opacity="0.8"/>
+    <circle cx="480" cy="100" r="6" opacity="0.7"/>
+    <circle cx="180" cy="270" r="7" opacity="0.8"/>
+    <circle cx="450" cy="480" r="6" opacity="0.8"/>
+  </g>
+
+  <rect x="130" y="570" width="340" height="60" rx="30" fill="#ffffff" filter="url(#softGlow2)"/>
+  <text x="300" y="608" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="bold" fill="#b45309" text-anchor="middle">
+    Celebrating You, Nandhini 🐝
+  </text>
+</svg>

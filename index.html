@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Happy Birthday, Siva Nandhini 💕 | A Surprise for You</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Canvas Confetti Library via CDN (with pure canvas fallback) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Ambient Particles Layer (Background) -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Confetti Layer (Foreground) -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Audio Element for Soft Background Instrumental -->
+  <audio id="bg-music-audio" loop preload="auto" src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3"></audio>
+
+  <!-- Floating Music Toggle Button -->
+  <button id="music-toggle-btn" class="music-toggle-btn" aria-label="Toggle Background Music">
+    <span class="music-icon">🎵</span>
+    <span id="music-btn-text">Music: Tap to Play</span>
+  </button>
+
+  <!-- Top Progress Bar (8 Steps) -->
+  <div class="progress-bar-container" aria-label="Progress Tracker">
+    <div class="progress-dot active" title="Step 1: Welcome"></div>
+    <div class="progress-dot" title="Step 2: Balloons"></div>
+    <div class="progress-dot" title="Step 3: Cake"></div>
+    <div class="progress-dot" title="Step 4: Bouquet"></div>
+    <div class="progress-dot" title="Step 5: Memories"></div>
+    <div class="progress-dot" title="Step 6: Envelope"></div>
+    <div class="progress-dot" title="Step 7: Letter"></div>
+    <div class="progress-dot" title="Step 8: Gift"></div>
+  </div>
+
+  <!-- Main Experience Wrapper -->
+  <main class="app-container">
+
+    <!-- ===================================================================
+         STEP 1: LANDING / INTRO SCREEN
+         =================================================================== -->
+    <section id="step-1" class="step-section active">
+      <div class="badge-pill">🎂 Special Birthday Surprise 🎂</div>
+
+      <!-- Cute Characters Holding Birthday Cake Art -->
+      <div class="hero-art-container">
+        <svg viewBox="0 0 400 300" width="100%" height="100%">
+          <defs>
+            <radialGradient id="cakeGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#fef08a" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#fff0f3" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Floating Pastel Sparkles & Hearts -->
+          <circle cx="200" cy="180" r="100" fill="url(#cakeGlow)"/>
+          <g fill="#f43f5e" opacity="0.6">
+            <path d="M 70,70 C 70,60 55,50 42,60 C 28,72 42,95 70,110 C 98,95 112,72 98,60 C 85,50 70,60 70,70 Z" transform="scale(0.3) translate(120, 100)"/>
+            <path d="M 330,70 C 330,60 315,50 302,60 C 288,72 302,95 330,110 C 358,95 372,72 358,60 C 345,50 330,60 330,70 Z" transform="scale(0.3) translate(800, 110)"/>
+          </g>
+
+          <!-- Character 1: Cute Chibi Boy (Abishek) on Left -->
+          <g transform="translate(100, 150)">
+            <!-- Body -->
+            <path d="M -25,25 C -30,60 -25,90 -10,95 L 10,95 C 25,90 30,60 25,25 Z" fill="#60a5fa"/>
+            <!-- Head -->
+            <circle cx="0" cy="-5" r="34" fill="#fde2d2"/>
+            <!-- Hair -->
+            <path d="M -34,-10 C -34,-45 34,-45 34,-10 C 30,-25 15,-30 0,-25 C -15,-30 -30,-25 -34,-10 Z" fill="#332211"/>
+            <!-- Smiling Eyes -->
+            <path d="M -16,-5 Q -10,-12 -4,-5" stroke="#1f2937" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 4,-5 Q 10,-12 16,-5" stroke="#1f2937" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Smile & Blush -->
+            <path d="M -6,6 Q 0,14 6,6" stroke="#1f2937" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="-18" cy="2" rx="6" ry="4" fill="#f87171" opacity="0.5"/>
+            <ellipse cx="18" cy="2" rx="6" ry="4" fill="#f87171" opacity="0.5"/>
+            <!-- Cute Party Hat -->
+            <polygon points="0,-36 -14,-75 14,-75" fill="#f43f5e" transform="rotate(-12 0 -36)"/>
+            <circle cx="-16" cy="-75" r="5" fill="#fde047"/>
+            <!-- Arm holding cake -->
+            <path d="M 18,35 Q 40,32 55,20" stroke="#fde2d2" stroke-width="10" stroke-linecap="round" fill="none"/>
+          </g>
+
+          <!-- Character 2: Cute Chibi Girl (Siva Nandhini) with Curly Hair on Right -->
+          <g transform="translate(300, 150)">
+            <!-- Voluminous Curly Hair in Back -->
+            <g fill="#451a03">
+              <circle cx="-25" cy="-20" r="22"/>
+              <circle cx="25" cy="-20" r="22"/>
+              <circle cx="-32" cy="10" r="20"/>
+              <circle cx="32" cy="10" r="20"/>
+              <circle cx="0" cy="-25" r="26"/>
+            </g>
+            <!-- Body -->
+            <path d="M -25,25 C -30,60 -25,90 -10,95 L 10,95 C 25,90 30,60 25,25 Z" fill="#f472b6"/>
+            <!-- Head -->
+            <circle cx="0" cy="-5" r="34" fill="#fde2d2"/>
+            <!-- Curly Bangs -->
+            <path d="M -30,-12 Q -15,-2 0,-14 Q 15,-2 30,-12 Q 15,-30 -30,-12 Z" fill="#451a03"/>
+            <circle cx="-18" cy="-12" r="8" fill="#451a03"/>
+            <circle cx="18" cy="-12" r="8" fill="#451a03"/>
+            <!-- Happy Eyes -->
+            <path d="M -16,-5 Q -10,-14 -4,-5" stroke="#1f2937" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M 4,-5 Q 10,-14 16,-5" stroke="#1f2937" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Smile & Rosy Blushing Cheeks -->
+            <path d="M -7,6 Q 0,16 7,6" stroke="#1f2937" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="-18" cy="2" rx="7" ry="5" fill="#f43f5e" opacity="0.6"/>
+            <ellipse cx="18" cy="2" rx="7" ry="5" fill="#f43f5e" opacity="0.6"/>
+            <!-- Cute Party Hat -->
+            <polygon points="0,-36 -14,-75 14,-75" fill="#c084fc" transform="rotate(12 0 -36)"/>
+            <circle cx="16" cy="-75" r="5" fill="#fde047"/>
+            <!-- Arm holding cake -->
+            <path d="M -18,35 Q -40,32 -55,20" stroke="#fde2d2" stroke-width="10" stroke-linecap="round" fill="none"/>
+          </g>
+
+          <!-- Birthday Cake Held in the Center -->
+          <g transform="translate(200, 175)">
+            <!-- Cake Plate -->
+            <ellipse cx="0" cy="55" rx="55" ry="10" fill="#ffffff" stroke="#fecdd3" stroke-width="2"/>
+            <!-- Cake Layer -->
+            <rect x="-42" y="10" width="84" height="42" rx="8" fill="#fb7185"/>
+            <path d="M -42,16 C -32,26 -22,26 -12,16 C -2,26 8,26 18,16 C 28,26 38,26 42,16 L 42,10 L -42,10 Z" fill="#ffffff"/>
+            <!-- Strawberries -->
+            <circle cx="-25" cy="8" r="6" fill="#e11d48"/>
+            <circle cx="0" cy="6" r="6" fill="#e11d48"/>
+            <circle cx="25" cy="8" r="6" fill="#e11d48"/>
+            <!-- Glowing Birthday Candle -->
+            <rect x="-3" y="-18" width="6" height="24" rx="2" fill="#fef08a"/>
+            <!-- Flickering Flame -->
+            <path d="M 0,-32 C -5,-26 -4,-20 0,-18 C 4,-20 5,-26 0,-32 Z" fill="#f59e0b"/>
+            <circle cx="0" cy="-24" r="3" fill="#fef08a"/>
+          </g>
+        </svg>
+      </div>
+
+      <h1 class="step-title gradient-text">Happy Birthday, Siva Nandhini 💕</h1>
+      <p class="step-subtitle">Are you excited for what’s next?</p>
+
+      <div class="landing-buttons-row">
+        <button id="btn-start-yes" class="btn-primary">
+          <span>Yes 💖</span>
+        </button>
+        <button id="btn-start-no" class="btn-secondary btn-no-playful">
+          <span>No</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         STEP 2: POP THE BALLOONS
+         =================================================================== -->
+    <section id="step-2" class="step-section">
+      <div class="badge-pill">🎈 Pop To Reveal 🎈</div>
+      <h2 class="step-title">Pop all 4 balloons</h2>
+      <p class="step-subtitle">Tap each cute balloon to reveal a secret message!</p>
+
+      <!-- 4 Watercolor-Style Balloons Grid -->
+      <div class="balloon-grid">
+        <!-- Balloon 1 (Blue) -->
+        <div class="balloon-item" data-index="0">
+          <div class="balloon-body">
+            <span class="balloon-face">(｡♥‿♥｡)</span>
+          </div>
+          <div class="balloon-knot"></div>
+          <div class="balloon-string"></div>
+          <div class="revealed-word-pill">You</div>
+        </div>
+
+        <!-- Balloon 2 (Pink) -->
+        <div class="balloon-item" data-index="1">
+          <div class="balloon-body">
+            <span class="balloon-face">(✿◠‿◠)</span>
+          </div>
+          <div class="balloon-knot"></div>
+          <div class="balloon-string"></div>
+          <div class="revealed-word-pill">are</div>
+        </div>
+
+        <!-- Balloon 3 (Green) -->
+        <div class="balloon-item" data-index="2">
+          <div class="balloon-body">
+            <span class="balloon-face">(◕‿◕✿)</span>
+          </div>
+          <div class="balloon-knot"></div>
+          <div class="balloon-string"></div>
+          <div class="revealed-word-pill">so</div>
+        </div>
+
+        <!-- Balloon 4 (Purple) -->
+        <div class="balloon-item" data-index="3">
+          <div class="balloon-body">
+            <span class="balloon-face">(⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)</span>
+          </div>
+          <div class="balloon-knot"></div>
+          <div class="balloon-string"></div>
+          <div class="revealed-word-pill">special</div>
+        </div>
+      </div>
+
+      <!-- Revealed Sentence Box -->
+      <div class="revealed-sentence-box">
+        <span id="word-slot-0" class="word-slot">...</span>
+        <span id="word-slot-1" class="word-slot">...</span>
+        <span id="word-slot-2" class="word-slot">...</span>
+        <span id="word-slot-3" class="word-slot">...</span>
+        <span style="font-size: 1.2rem;">✨</span>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         STEP 3: BLOW THE CANDLE
+         =================================================================== -->
+    <section id="step-3" class="step-section">
+      <div class="badge-pill">🎂 Make A Wish 🎂</div>
+      <h2 class="step-title">Blow the candle, Siva Nandhini</h2>
+      <p class="step-subtitle">Make a wish in your heart first...</p>
+
+      <!-- Interactive Birthday Cake Stage -->
+      <div id="cake-stage" class="cake-stage" title="Click or tap to blow the candle!">
+        <div id="interactive-cake" class="interactive-cake">
+          <!-- Candle & Flickering Flame -->
+          <div class="candle-wrapper">
+            <div id="candle-flame" class="flame"></div>
+            <div class="candle-wick"></div>
+            <div class="candle-stick"></div>
+          </div>
+
+          <!-- Cake Layers -->
+          <svg class="cake-body-svg" viewBox="0 0 300 220">
+            <!-- Plate -->
+            <ellipse cx="150" cy="205" rx="145" ry="14" fill="#ffffff" stroke="#fecdd3" stroke-width="4"/>
+            <ellipse cx="150" cy="202" rx="135" ry="10" fill="#fff1f2"/>
+
+            <!-- Cake Base Layer -->
+            <rect x="30" y="115" width="240" height="85" rx="18" fill="#fda4af"/>
+            <!-- Bottom Frosting Drip -->
+            <path d="M 30,130 C 45,155 60,155 75,130 C 90,160 105,160 120,130 C 135,160 150,160 165,130 C 180,160 195,160 210,130 C 225,160 240,160 255,130 C 265,145 268,135 270,130 L 270,115 L 30,115 Z" fill="#ffffff"/>
+
+            <!-- Top Layer -->
+            <rect x="65" y="45" width="170" height="75" rx="14" fill="#fb7185"/>
+            <!-- Top Frosting Drip -->
+            <path d="M 65,58 C 80,78 95,78 110,58 C 125,82 140,82 155,58 C 170,82 185,82 200,58 C 215,80 225,75 235,58 L 235,45 L 65,45 Z" fill="#ffffff"/>
+
+            <!-- Strawberries & Cherries -->
+            <circle cx="85" cy="40" r="12" fill="#e11d48"/>
+            <circle cx="120" cy="38" r="12" fill="#e11d48"/>
+            <circle cx="150" cy="36" r="13" fill="#e11d48"/>
+            <circle cx="180" cy="38" r="12" fill="#e11d48"/>
+            <circle cx="215" cy="40" r="12" fill="#e11d48"/>
+
+            <!-- Colorful Sprinkles -->
+            <rect x="50" y="160" width="8" height="4" rx="2" fill="#fde047" transform="rotate(25 50 160)"/>
+            <rect x="100" y="170" width="8" height="4" rx="2" fill="#60a5fa" transform="rotate(-35 100 170)"/>
+            <rect x="160" y="165" width="8" height="4" rx="2" fill="#4ade80" transform="rotate(45 160 165)"/>
+            <rect x="220" y="170" width="8" height="4" rx="2" fill="#c084fc" transform="rotate(-20 220 170)"/>
+            <rect x="90" y="85" width="7" height="3.5" rx="2" fill="#fde047" transform="rotate(30 90 85)"/>
+            <rect x="145" y="80" width="7" height="3.5" rx="2" fill="#38bdf8" transform="rotate(-40 145 80)"/>
+            <rect x="200" y="88" width="7" height="3.5" rx="2" fill="#4ade80" transform="rotate(15 200 88)"/>
+          </svg>
+        </div>
+      </div>
+
+      <div id="cake-prompt-text" class="blow-hint-pill">
+        <span>Tap to blow the candle 💨</span>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         STEP 4: ROSE BOUQUET
+         =================================================================== -->
+    <section id="step-4" class="step-section">
+      <div class="badge-pill">🌹 Just For You 🌹</div>
+      <h2 class="step-title">Your Rose Bouquet 🌹</h2>
+      <p class="step-subtitle">Because someone as wonderful as you deserves all the flowers in the world today!</p>
+
+      <div class="bouquet-display-box">
+        <!-- Photorealistic Red Rose Bouquet -->
+        <div class="bouquet-wrapper">
+          <img id="bouquet-img" class="realistic-bouquet-img" src="photos/rose_bouquet.png" alt="Realistic Red Rose Bouquet" />
+          <div class="bouquet-shadow"></div>
+        </div>
+
+        <div class="bouquet-card-note">
+          "May this year bloom with as much grace, beauty, and bright laughter as these roses!" ✨
+        </div>
+      </div>
+
+      <button id="bouquet-continue-btn" class="btn-primary" style="opacity: 0;">
+        <span>Continue →</span>
+      </button>
+    </section>
+
+    <!-- ===================================================================
+         STEP 5: SWEET MOMENTS (POLAROID PHOTO CARDS)
+         =================================================================== -->
+    <section id="step-5" class="step-section">
+      <div class="badge-pill">📸 Memories & Smiles 📸</div>
+      <h2 class="step-title">Some Sweet Moments</h2>
+      <p class="step-subtitle">(Swipe the cards or tap arrows to flip)</p>
+
+      <!-- Polaroid Cards Stack -->
+      <div class="polaroid-deck-wrapper">
+        <div id="polaroid-deck" class="polaroid-deck">
+          <!-- Dynamically injected via script.js -->
+        </div>
+      </div>
+
+      <!-- Controls & Navigation -->
+      <div class="deck-controls">
+        <button id="deck-prev-btn" class="deck-nav-btn" aria-label="Previous Photo">←</button>
+        <div id="deck-counter" class="deck-counter-pill">Card 1 of 5</div>
+        <button id="deck-next-btn" class="deck-nav-btn" aria-label="Next Photo">→</button>
+      </div>
+
+      <button id="cards-to-letter-btn" class="btn-primary" style="margin-top: 20px; display: none;">
+        <span>Open Your Letter 💌</span>
+      </button>
+    </section>
+
+    <!-- ===================================================================
+         STEP 6: OPEN THE ENVELOPE
+         =================================================================== -->
+    <section id="step-6" class="step-section">
+      <div class="badge-pill">💌 Special Delivery 💌</div>
+      <h2 class="step-title">A Letter For You</h2>
+      <p class="step-subtitle">Someone wrote something straight from the heart...</p>
+
+      <div id="envelope-stage" class="envelope-stage" title="Tap to open the envelope!">
+        <div id="envelope-wrapper" class="envelope-wrapper">
+          <div class="envelope-back"></div>
+          
+          <!-- Peek of letter paper inside -->
+          <div class="envelope-letter-peek">
+            <div class="letter-peek-line" style="width: 60%;"></div>
+            <div class="letter-peek-line" style="width: 85%;"></div>
+            <div class="letter-peek-line" style="width: 70%;"></div>
+          </div>
+
+          <!-- Pocket Triangular Folds -->
+          <div class="envelope-pocket">
+            <div class="pocket-left"></div>
+            <div class="pocket-right"></div>
+            <div class="pocket-bottom"></div>
+          </div>
+
+          <!-- Triangular Flap (Folds Open in 3D) -->
+          <div class="envelope-flap"></div>
+
+          <!-- Golden Wax Seal with Heart Monogram -->
+          <div class="wax-seal">
+            <span>SN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="envelope-open-prompt">
+        <span>✨ TAP TO OPEN ✨</span>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         STEP 7: A MESSAGE FROM MY HEART (THE LETTER)
+         =================================================================== -->
+    <section id="step-7" class="step-section">
+      <div class="badge-pill">🌸 From My Heart 🌸</div>
+      <h2 class="step-title">A Message For You</h2>
+
+      <!-- Soft Notepad / Lined Stationery Paper -->
+      <article class="letter-paper-card">
+        <!-- Cute Cat Sticker in Top Right Corner -->
+        <svg class="cat-sticker-corner" viewBox="0 0 100 100">
+          <!-- Cat Face -->
+          <circle cx="50" cy="55" r="35" fill="#ffffff" stroke="#fbcfe8" stroke-width="3"/>
+          <!-- Ears -->
+          <polygon points="25,32 15,6 40,24" fill="#ffffff" stroke="#fbcfe8" stroke-width="3"/>
+          <polygon points="24,28 18,12 36,22" fill="#fda4af"/>
+          <polygon points="75,32 85,6 60,24" fill="#ffffff" stroke="#fbcfe8" stroke-width="3"/>
+          <polygon points="76,28 82,12 64,22" fill="#fda4af"/>
+          <!-- Eyes & Nose -->
+          <circle cx="38" cy="52" r="4" fill="#1f2937"/>
+          <circle cx="62" cy="52" r="4" fill="#1f2937"/>
+          <polygon points="50,60 46,56 54,56" fill="#f43f5e"/>
+          <path d="M 46,62 Q 50,66 54,62" stroke="#1f2937" stroke-width="2" fill="none"/>
+          <!-- Whiskers -->
+          <line x1="20" y1="56" x2="30" y2="58" stroke="#9ca3af" stroke-width="2"/>
+          <line x1="20" y1="64" x2="30" y2="62" stroke="#9ca3af" stroke-width="2"/>
+          <line x1="80" y1="56" x2="70" y2="58" stroke="#9ca3af" stroke-width="2"/>
+          <line x1="80" y1="64" x2="70" y2="62" stroke="#9ca3af" stroke-width="2"/>
+          <!-- Cute Party Hat -->
+          <polygon points="50,22 42,2 58,2" fill="#ec4899"/>
+          <circle cx="50" cy="2" r="3" fill="#fde047"/>
+        </svg>
+
+        <!-- Flower Sticker in Bottom Left Corner -->
+        <svg class="flower-sticker-corner" viewBox="0 0 60 60">
+          <circle cx="30" cy="30" r="10" fill="#fde047"/>
+          <circle cx="30" cy="14" r="8" fill="#f472b6"/>
+          <circle cx="46" cy="30" r="8" fill="#f472b6"/>
+          <circle cx="30" cy="46" r="8" fill="#f472b6"/>
+          <circle cx="14" cy="30" r="8" fill="#f472b6"/>
+        </svg>
+
+        <!-- Dynamic Letter Content (revealed smoothly) -->
+        <div id="letter-content-body" class="letter-body">
+          <!-- Injected via script.js -->
+        </div>
+
+        <button id="btn-skip-letter" class="btn-skip-letter">Read all immediately ⚡</button>
+      </article>
+
+      <div class="letter-actions-row">
+        <button id="letter-to-gift-btn" class="btn-primary" style="display: none;">
+          <span>One Last Surprise 🎁 →</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         STEP 8: ONE LAST THING – THE GIFT & GRAND FINALE
+         =================================================================== -->
+    <section id="step-8" class="step-section">
+      <div class="badge-pill">🎀 Finale Surprise 🎀</div>
+      <h2 id="gift-step-title" class="step-title">One Last Thing…</h2>
+      <p id="gift-step-subtitle" class="step-subtitle">Just for the birthday girl... tap the gift box!</p>
+
+      <!-- Interactive 3D Gift Box Stage -->
+      <div id="gift-stage" class="gift-box-stage" title="Tap to unbox your gift!">
+        <div id="gift-box" class="gift-box shake">
+          <!-- Lid with Ribbon Bow -->
+          <div class="gift-lid">
+            <div class="gift-ribbon-vertical-lid"></div>
+            <div class="gift-bow">
+              <div class="bow-loop-left"></div>
+              <div class="bow-knot"></div>
+              <div class="bow-loop-right"></div>
+            </div>
+          </div>
+
+          <!-- Base Box -->
+          <div class="gift-base">
+            <div class="gift-ribbon-vertical-base"></div>
+            <div class="gift-ribbon-horizontal-base"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finale Reveal Card (Revealed upon opening the gift) -->
+      <div id="finale-reveal-card" class="finale-reveal-card" style="display: none;">
+        <!-- Cute Characters Celebrating SVG Art -->
+        <svg class="finale-characters-art" viewBox="0 0 320 220">
+          <!-- Party Bunting -->
+          <path d="M 20,25 Q 160,60 300,25" stroke="#f472b6" stroke-width="2.5" fill="none" stroke-dasharray="4,4"/>
+          <polygon points="50,32 70,35 60,65" fill="#f43f5e"/>
+          <polygon points="110,42 130,44 120,75" fill="#fbbf24"/>
+          <polygon points="170,46 190,46 180,78" fill="#38bdf8"/>
+          <polygon points="230,40 250,37 240,70" fill="#4ade80"/>
+
+          <!-- Bunny Character Celebrating on Left -->
+          <g transform="translate(95, 135)">
+            <!-- Ears -->
+            <ellipse cx="-12" cy="-45" rx="8" ry="24" fill="#ffffff" stroke="#fbcfe8" stroke-width="2"/>
+            <ellipse cx="-12" cy="-45" rx="4" ry="16" fill="#fda4af"/>
+            <ellipse cx="12" cy="-45" rx="8" ry="24" fill="#ffffff" stroke="#fbcfe8" stroke-width="2"/>
+            <ellipse cx="12" cy="-45" rx="4" ry="16" fill="#fda4af"/>
+            <!-- Head & Body -->
+            <circle cx="0" cy="-5" r="28" fill="#ffffff" stroke="#fbcfe8" stroke-width="2"/>
+            <path d="M -18,20 C -22,45 -18,65 0,65 C 18,65 22,45 18,20 Z" fill="#ffffff" stroke="#fbcfe8" stroke-width="2"/>
+            <!-- Happy Face -->
+            <path d="M -10,-8 Q -6,-14 -2,-8" stroke="#1f2937" stroke-width="2.5" fill="none"/>
+            <path d="M 2,-8 Q 6,-14 10,-8" stroke="#1f2937" stroke-width="2.5" fill="none"/>
+            <ellipse cx="-12" cy="0" rx="5" ry="3" fill="#f43f5e" opacity="0.6"/>
+            <ellipse cx="12" cy="0" rx="5" ry="3" fill="#f43f5e" opacity="0.6"/>
+            <polygon points="0,0 -3,-3 3,-3" fill="#fb7185"/>
+            <!-- Cheerful Arms -->
+            <path d="M -18,15 Q -35,5 -38,-15" stroke="#ffffff" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <path d="M -18,15 Q -35,5 -38,-15" stroke="#fbcfe8" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <!-- Party Popper in Hand -->
+            <polygon points="-40,-18 -48,-32 -32,-32" fill="#ec4899"/>
+          </g>
+
+          <!-- Bear Character Celebrating on Right -->
+          <g transform="translate(225, 135)">
+            <!-- Ears -->
+            <circle cx="-20" cy="-24" r="10" fill="#fed7aa"/>
+            <circle cx="-20" cy="-24" r="5" fill="#ea580c"/>
+            <circle cx="20" cy="-24" r="10" fill="#fed7aa"/>
+            <circle cx="20" cy="-24" r="5" fill="#ea580c"/>
+            <!-- Head & Body -->
+            <circle cx="0" cy="-5" r="28" fill="#ffedd5"/>
+            <path d="M -18,20 C -22,45 -18,65 0,65 C 18,65 22,45 18,20 Z" fill="#ffedd5"/>
+            <!-- Muzzle & Face -->
+            <ellipse cx="0" cy="2" rx="14" ry="10" fill="#ffffff"/>
+            <ellipse cx="0" cy="-1" rx="4" ry="3" fill="#78350f"/>
+            <path d="M -8,-6 Q -5,-12 -2,-6" stroke="#78350f" stroke-width="2.5" fill="none"/>
+            <path d="M 2,-6 Q 5,-12 8,-6" stroke="#78350f" stroke-width="2.5" fill="none"/>
+            <ellipse cx="-14" cy="1" rx="5" ry="3" fill="#f87171" opacity="0.5"/>
+            <ellipse cx="14" cy="1" rx="5" ry="3" fill="#f87171" opacity="0.5"/>
+            <!-- Cheerful Arms -->
+            <path d="M 18,15 Q 35,5 38,-15" stroke="#ffedd5" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <!-- Heart Balloon in hand -->
+            <g transform="translate(42, -50)">
+              <path d="M 0,0 C -6,-10 -15,-5 -8,5 Q 0,14 0,18 Q 0,14 8,5 C 15,-5 6,-10 0,0 Z" fill="#f43f5e"/>
+              <line x1="0" y1="18" x2="-4" y2="35" stroke="#d1d5db" stroke-width="1.5"/>
+            </g>
+          </g>
+        </svg>
+
+        <h3 class="finale-headline">Lots of love for you 💕</h3>
+        <p class="finale-message">
+          Once again, <strong>Happy Birthday Siva Nandhini!</strong><br />
+          Hope you loved your surprise and that it brought a big smile to your face today.
+        </p>
+
+        <div class="finale-buttons-row">
+          <button id="btn-shower-love" class="btn-primary">
+            <span>Shower Love 💖</span>
+          </button>
+          <button id="btn-replay-all" class="btn-secondary">
+            <span>Replay Surprise ↺</span>
+          </button>
+        </div>
+
+        <div class="footer-credit">
+          Made with effort & care by Abishek ❤️
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Script Engine -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd1dc" />
+      <stop offset="50%" stop-color="#ffe6ec" />
+      <stop offset="100%" stop-color="#ffccd5" />
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffd1dc" stop-opacity="0" />
+    </radialGradient>
+    <filter id="softShadow1">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#f43f5e" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="700" fill="url(#bg1)" rx="24"/>
+  <circle cx="300" cy="320" r="240" fill="url(#glow1)"/>
+
+  <!-- Decorative Sparkles and Confetti -->
+  <g fill="#ff758f" opacity="0.6">
+    <circle cx="120" cy="140" r="6"/>
+    <circle cx="480" cy="180" r="8"/>
+    <circle cx="160" cy="520" r="7"/>
+    <circle cx="460" cy="480" r="5"/>
+  </g>
+  <g fill="#ffd166" opacity="0.8">
+    <polygon points="180,100 185,115 200,115 188,125 192,140 180,130 168,140 172,125 160,115 175,115" />
+    <polygon points="420,120 424,132 436,132 426,140 430,152 420,144 410,152 414,140 404,132 416,132" />
+    <polygon points="130,380 134,392 146,392 136,400 140,412 130,404 120,412 124,400 114,392 126,392" />
+    <polygon points="490,340 494,352 506,352 496,360 500,372 490,364 480,372 484,360 474,352 486,352" />
+  </g>
+
+  <!-- Party Bunting Banner -->
+  <path d="M 80,80 Q 300,140 520,80" fill="none" stroke="#ff85a1" stroke-width="3" stroke-dasharray="6,4"/>
+  <polygon points="120,88 150,92 135,130" fill="#f43f5e" />
+  <polygon points="190,99 220,103 205,142" fill="#c084fc" />
+  <polygon points="260,107 290,108 275,150" fill="#60a5fa" />
+  <polygon points="330,108 360,106 345,149" fill="#34d399" />
+  <polygon points="400,102 430,97 415,140" fill="#fbbf24" />
+  <polygon points="465,91 495,85 480,128" fill="#f472b6" />
+
+  <!-- Center Birthday Cake Art -->
+  <g filter="url(#softShadow1)">
+    <!-- Plate -->
+    <ellipse cx="300" cy="510" rx="170" ry="24" fill="#ffffff" stroke="#ffccd5" stroke-width="4"/>
+    <ellipse cx="300" cy="505" rx="150" ry="18" fill="#fff0f3"/>
+
+    <!-- Bottom Layer -->
+    <rect x="180" y="380" width="240" height="110" rx="16" fill="#fbb1bd"/>
+    <!-- Frosting drips -->
+    <path d="M 180,395 C 195,420 210,420 220,395 C 235,425 250,425 265,395 C 280,425 295,425 310,395 C 325,425 340,425 355,395 C 370,425 385,425 400,395 C 410,415 418,405 420,395 L 420,380 L 180,380 Z" fill="#ffffff"/>
+    
+    <!-- Top Layer -->
+    <rect x="220" y="290" width="160" height="95" rx="14" fill="#ff758f"/>
+    <!-- Top Layer Frosting -->
+    <path d="M 220,305 C 235,325 245,325 255,305 C 270,328 280,328 295,305 C 310,328 320,328 335,305 C 350,328 360,325 380,305 L 380,290 L 220,290 Z" fill="#ffffff"/>
+
+    <!-- Strawberries & Cherries on top -->
+    <circle cx="240" cy="285" r="14" fill="#e11d48"/>
+    <circle cx="280" cy="282" r="14" fill="#e11d48"/>
+    <circle cx="320" cy="282" r="14" fill="#e11d48"/>
+    <circle cx="360" cy="285" r="14" fill="#e11d48"/>
+
+    <!-- Birthday Candle -->
+    <rect x="293" y="210" width="14" height="70" rx="4" fill="#fef08a" stroke="#f59e0b" stroke-width="2"/>
+    <!-- Stripes on candle -->
+    <path d="M 293,230 L 307,222 M 293,250 L 307,242 M 293,270 L 307,262" stroke="#f43f5e" stroke-width="3"/>
+    <!-- Wick -->
+    <line x1="300" y1="210" x2="300" y2="198" stroke="#333" stroke-width="3"/>
+    <!-- Flame -->
+    <path d="M 300,165 C 290,185 292,198 300,202 C 308,198 310,185 300,165 Z" fill="#f59e0b"/>
+    <path d="M 300,175 C 295,188 296,198 300,200 C 304,198 305,188 300,175 Z" fill="#fef08a"/>
+  </g>
+
+  <!-- Typography Banner inside Illustration -->
+  <rect x="120" y="565" width="360" height="60" rx="30" fill="#ffffff" filter="url(#softShadow1)"/>
+  <text x="300" y="604" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="bold" fill="#e11d48" text-anchor="middle">
+    Happy Birthday, Nandhini! ✨
+  </text>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf2e9" />
+      <stop offset="50%" stop-color="#fae8e0" />
+      <stop offset="100%" stop-color="#f5d0c5" />
+    </linearGradient>
+    <filter id="shadow4">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#ea580c" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="700" fill="url(#bg4)" rx="24"/>
+
+  <!-- Floating Hearts around -->
+  <g fill="#f43f5e" opacity="0.6">
+    <path d="M 160,180 C 160,165 140,150 120,165 C 100,180 120,210 160,230 C 200,210 220,180 200,165 C 180,150 160,165 160,180 Z" transform="scale(0.5) translate(30, 80)"/>
+    <path d="M 300,120 C 300,105 280,90 260,105 C 240,120 260,150 300,170 C 340,150 360,120 340,105 C 320,90 300,105 300,120 Z" transform="scale(0.7) translate(130, 40)"/>
+    <path d="M 440,160 C 440,145 420,130 400,145 C 380,160 400,190 440,210 C 480,190 500,160 480,145 C 460,130 440,145 440,160 Z" transform="scale(0.5) translate(400, 100)"/>
+  </g>
+
+  <!-- Cup 1: Strawberry Milk Boba (Pink) -->
+  <g transform="translate(210, 360) rotate(-8)" filter="url(#shadow4)">
+    <!-- Cup Body -->
+    <path d="M -55,-90 L 55,-90 L 42,90 L -42,90 Z" fill="#ffe4e6" stroke="#f43f5e" stroke-width="4" rx="10"/>
+    <!-- Liquid -->
+    <path d="M -50,-60 L 50,-60 L 40,84 L -40,84 Z" fill="#fda4af"/>
+    <!-- Boba Pearls -->
+    <g fill="#881337">
+      <circle cx="-20" cy="65" r="9"/>
+      <circle cx="5" cy="70" r="9"/>
+      <circle cx="24" cy="60" r="9"/>
+      <circle cx="-10" cy="45" r="9"/>
+      <circle cx="15" cy="48" r="9"/>
+    </g>
+    <!-- Lid -->
+    <ellipse cx="0" cy="-90" rx="60" ry="14" fill="#ffffff" stroke="#f43f5e" stroke-width="4"/>
+    <!-- Straw -->
+    <line x1="5" y1="-90" x2="25" y2="-170" stroke="#fb7185" stroke-width="12" stroke-linecap="round"/>
+    <line x1="8" y1="-90" x2="25" y2="-170" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <!-- Smiling Happy Eyes -->
+    <path d="M -24,-15 Q -15,-28 -6,-15" stroke="#4c0519" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 6,-15 Q 15,-28 24,-15" stroke="#4c0519" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M -8,5 Q 0,18 8,5" stroke="#4c0519" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="-26" cy="-2" rx="9" ry="5" fill="#f43f5e" opacity="0.6"/>
+    <ellipse cx="26" cy="-2" rx="9" ry="5" fill="#f43f5e" opacity="0.6"/>
+  </g>
+
+  <!-- Cup 2: Iced Matcha / Milk Coffee (Pastel Blue/Green) -->
+  <g transform="translate(390, 360) rotate(8)" filter="url(#shadow4)">
+    <!-- Cup Body -->
+    <path d="M -55,-90 L 55,-90 L 42,90 L -42,90 Z" fill="#e0f2fe" stroke="#0284c7" stroke-width="4" rx="10"/>
+    <!-- Liquid -->
+    <path d="M -50,-60 L 50,-60 L 40,84 L -40,84 Z" fill="#7dd3fc"/>
+    <!-- Boba Pearls -->
+    <g fill="#075985">
+      <circle cx="-20" cy="65" r="9"/>
+      <circle cx="5" cy="70" r="9"/>
+      <circle cx="24" cy="60" r="9"/>
+      <circle cx="-10" cy="45" r="9"/>
+      <circle cx="15" cy="48" r="9"/>
+    </g>
+    <!-- Lid -->
+    <ellipse cx="0" cy="-90" rx="60" ry="14" fill="#ffffff" stroke="#0284c7" stroke-width="4"/>
+    <!-- Straw -->
+    <line x1="-5" y1="-90" x2="-25" y2="-170" stroke="#38bdf8" stroke-width="12" stroke-linecap="round"/>
+    <line x1="-2" y1="-90" x2="-25" y2="-170" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <!-- Cute Winking Face -->
+    <path d="M -24,-15 Q -15,-28 -6,-15" stroke="#0c4a6e" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="15" cy="-20" r="5" fill="#0c4a6e"/>
+    <path d="M -8,5 Q 0,18 8,5" stroke="#0c4a6e" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="-26" cy="-2" rx="9" ry="5" fill="#0284c7" opacity="0.4"/>
+    <ellipse cx="26" cy="-2" rx="9" ry="5" fill="#0284c7" opacity="0.4"/>
+  </g>
+
+  <!-- Cheers clink sparks -->
+  <g fill="#fbbf24" stroke="#f59e0b" stroke-width="1.5">
+    <polygon points="300,250 304,262 316,262 306,270 310,282 300,274 290,282 294,270 284,262 296,262"/>
+    <circle cx="275" cy="245" r="4"/>
+    <circle cx="325" cy="245" r="4"/>
+  </g>
+
+  <rect x="110" y="570" width="380" height="60" rx="30" fill="#ffffff" filter="url(#shadow4)"/>
+  <text x="300" y="608" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="bold" fill="#ea580c" text-anchor="middle">
+    Always Makes Me Smile 😊✨
+  </text>
+</svg>
