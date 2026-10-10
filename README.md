@@ -34,7 +34,7 @@ Built as a lightweight, single-page web app with **HTML5, CSS3, and JavaScript**
    - 5 personalized cards featuring real photos of Siva Nandhini & Abishek:
      1. `photo1.jpg`: **Happy Birthday! 🎂** — *Starting your new chapter looking as stunning and radiant as ever ✨ (Siva Nandhini in traditional lehenga)*
      2. `photo2.jpg`: **Celebrating you 🐝** — *Always buzzing with energy, kindness, and that signature charm 🌸 (Cute mirror selfie)*
-     3. `photo3.jpg`: **Always Makes Me Smile 😊** — *Cinema dates, endless laughs, and moments that make everything lighter ✨ (Abishek & Nandhini at cinema)*
+     3. `photo3.jpg`: **Always Makes Me Smile 😊** — *Cinema days, endless laughs, and moments that make everything lighter ✨ (Abishek & Nandhini at cinema)*
      4. `photo4.jpg`: **Make a wish 📍** — *May all the secret dreams and wonderful goals you hold come true 🌙✨ (Siva Nandhini in traditional saree)*
      5. `photo5.jpg`: **Medusa days 😂** — *NEET coaching, curly hair, pure chaos and unforgettable laughs! (Portrait with signature curly locks)*
    - Cards 6 and 7 have been removed.

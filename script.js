@@ -41,7 +41,7 @@ const photoCardsData = [
     file: 'photos/photo3.jpg',
     fallback: 'photos/photo3.svg',
     tag: 'Always Makes Me Smile 😊',
-    caption: 'Cinema dates, endless laughs, and moments that make everything lighter ✨'
+    caption: 'Cinema days, endless laughs, and moments that make everything lighter ✨'
   },
   {
     id: 4,
